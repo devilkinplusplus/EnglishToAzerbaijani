@@ -51,6 +51,7 @@ namespace EngTur
             timer1.Interval = 1000;
             timer1.Start();
             lbl_Time.Text = time.ToString() + " seconds";
+
         }
         private void HighScore()
         {
@@ -74,8 +75,8 @@ namespace EngTur
             {
                 timer1.Stop();
                 HighScore();
-               DialogResult secim= MessageBox.Show($"Your result  {correct} answer in 90 seconds \n" +
-                    $"    Do you wanna play again?","App",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                DialogResult secim= MessageBox.Show($"Your result is {correct} answers in 90 seconds \n" +
+                    $"    Do you want to play again?","App",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
                 if (secim==DialogResult.Yes)
                 {
                     time = 90;
