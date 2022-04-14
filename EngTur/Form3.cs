@@ -24,7 +24,7 @@ namespace EngTur
             SqlConnection conn = new SqlConnection("Data Source=WIN-0AVBIPRU9F2;Initial Catalog=Projects;Integrated Security=True");
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM tbl_ENGUS" +
-                " where USERNAME=@P1 OR PASSWORD=@P2",conn);
+                " where USERNAME=@P1 AND PASSWORD=@P2",conn);
             cmd.Parameters.AddWithValue("@P1", txtUsRe.Text);
             cmd.Parameters.AddWithValue("@P2", txtPasRe.Text);
             string scl = cmd.ExecuteScalar().ToString();
