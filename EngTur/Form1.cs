@@ -73,6 +73,7 @@ namespace EngTur
             lbl_Time.Text = time.ToString() + " seconds";
             if (time == 0)
             {
+                txtAZE.Clear();
                 timer1.Stop();
                 HighScore();
                 DialogResult secim= MessageBox.Show($"Your result is {correct} answers in 90 seconds \n" +
@@ -84,7 +85,6 @@ namespace EngTur
                     lblCorrect.Text = correct.ToString();
                     GetEng();
                     lbl_Time.Text = time.ToString() + " seconds";
-                    txtAZE.Clear();
                 }
                 else if (secim==DialogResult.No)
                 {
