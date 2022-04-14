@@ -25,7 +25,7 @@ namespace EngTur
 
         private void GetEng()
         {
-            select = rnd.Next(121);
+            select = rnd.Next(241);
             SqlConnection conn = new SqlConnection("Data Source=WIN-0AVBIPRU9F2;Initial Catalog=Projects;Integrated Security=True");
             conn.Open();
             SqlCommand cmd = new SqlCommand("Select * from tbl_Dict where id=@p",conn);
